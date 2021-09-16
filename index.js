@@ -1,18 +1,15 @@
 function alwaysHungry(arr) {
     // your code here 
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] === "food"){
-            /*arr[i] = "yummy";*/
-            console.log("yummy");
+        if(arr[i] != "food"){
+            console.log("I'm hungry");
         }
         else{
-            console.log(arr[i]);
+            if(arr[i] === "food"){
+                console.log("yummy");
+            }
         }
-    }
-
-    if(arr !== "food"){
-        arr = "I'm hungry";
-        /*console.log("I'm hungry");*/
+        
     }
 }
 
