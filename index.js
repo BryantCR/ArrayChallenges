@@ -57,12 +57,11 @@ console.log(result); // we expect back 4
 
 function reverse(arr) {
     // your code here
+    let reverseArray = [];
     for(let i = arr.length-1; i>=0; i--){
-        console.log(a[i]);
+        reverseArray.push(arr[i]);
     }
-    
-
-    return arr;
+    return reverseArray;
 }
    
 var result = reverse(["a", "b", "c", "d", "e"]);
@@ -74,6 +73,12 @@ function fibonacciArray(n) {
     // the [0, 1] are the starting values of the array to calculate the rest from
     var fibArr = [0, 1];
     // your code here
+    let sum = 0;
+
+    for(let i = 0; i < n-2; i++){
+        sum = fibArr[i] + fibArr[i + 1];
+        fibArr.push(sum);
+    }
     return fibArr;
 }
    
