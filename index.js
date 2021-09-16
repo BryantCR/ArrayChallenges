@@ -1,16 +1,14 @@
 function alwaysHungry(arr) {
     // your code here 
+    let count = 0;
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] != "food"){
-            arr = "I'm hungry";
-            console.log(arr);
+        if(arr[i] === "food"){
+            console.log("yummy");
+            count = count + 1;
         }
-        else{
-            if(arr[i] === "food"){
-                console.log("yummy");
-            }
-        }
-        
+    }
+    if(count === 0){
+        console.log("I'm hungry");
     }
 }
 
@@ -28,7 +26,6 @@ function highPass(arr, cutoff) {
             filteredArr.push(arr[i]);
         }
     }
-    // your code here
     return filteredArr;
 }
 var result = highPass([6, 8, 3, 10, -2, 5, 9], 5);
@@ -40,13 +37,13 @@ function betterThanAverage(arr) {
     var sum = 0;
     // calculate the average
     for(let i = 0; i < arr.length; i++){
-        sum = sum + arr[i] / 7;
+        sum = sum + arr[i];
     }
-
+    let average = sum  / arr.length;
     var count = 0
     // count how many values are greated than the average
     for(let i = 0; i < arr.length; i++){
-        if(arr[i] > sum){
+        if(arr[i] > average){
             count = count + 1;
         }
     }
@@ -60,6 +57,10 @@ console.log(result); // we expect back 4
 
 function reverse(arr) {
     // your code here
+    for(let i = arr.length-1; i>=0; i--){
+        console.log(a[i]);
+    }
+    
 
     return arr;
 }
