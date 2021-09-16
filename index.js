@@ -2,7 +2,8 @@ function alwaysHungry(arr) {
     // your code here 
     for(let i = 0; i < arr.length; i++){
         if(arr[i] != "food"){
-            console.log("I'm hungry");
+            arr = "I'm hungry";
+            console.log(arr);
         }
         else{
             if(arr[i] === "food"){
